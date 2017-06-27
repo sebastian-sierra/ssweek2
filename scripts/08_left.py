@@ -46,7 +46,7 @@ def step_wave(t):
 
         # set initial condition
         for i in range(0,nx):
-            u[t,i] = 0.0 #init_square( xmin + i*dx )
+            u[t,i] = 0.0 
 
     else:
         # compute second x-derivative using central differences
@@ -56,8 +56,7 @@ def step_wave(t):
         u[t,1:nx-1] = 2*u[t-1,1:nx-1] - u[t-2,1:nx-1] + (c*dt)**2 * ddx
 
         # apply boundary conditions
-#        u[t,0] = -2*np.sin(x)*np.sin(t)
-        u[t,0] = 3*math.sin(math.pi*dt*1/xmax)*math.cos(math.pi*dt*2*t/xmax)
+        u[t,0] = np.sin(t/30)
         u[t,nx-1] = 0
 
     l.set_data(np.linspace(xmin,xmax,nx), u[t,:])

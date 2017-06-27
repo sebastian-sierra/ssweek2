@@ -2,7 +2,7 @@ import vtk
 
 # Read the file (to test that it was written correctly)
 reader = vtk.vtkXMLImageDataReader()
-reader.SetFileName("D:/Notebooks_Bogota2017/SS_2017/data/challenge_0.vti")
+reader.SetFileName("../data/challenge_0.vti")
 reader.Update()
 
 # Convert the image to a polydata

@@ -1,7 +1,7 @@
 import vtk
 
 rectGridReader = vtk.vtkRectilinearGridReader()
-rectGridReader.SetFileName("D:/Notebooks_Bogota2017/SS_2017/data/jet4_0.500.vtk")
+rectGridReader.SetFileName("../data/jet4_0.500.vtk")
 rectGridReader.Update()
 
 #------------ CHALLENGE ONE ----------------------
@@ -123,8 +123,8 @@ renderer.SetBackground(0.5, 0.5, 0.5)
 #renderer.AddActor(outlineActor)
 #renderer.AddActor(gridGeomActor)
 #renderer.AddActor(pointsActor)
-renderer.AddActor(isoActor)
-#renderer.AddActor(hha)
+#renderer.AddActor(isoActor)
+renderer.AddActor(hha)
 renderer.ResetCamera()
 
 renderWindow = vtk.vtkRenderWindow()
